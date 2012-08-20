@@ -301,7 +301,8 @@ simFla.ux.plugins.signaturePad = Ext.extend(Ext.util.Observable, {
          width = this.width;
          height = this.height;
       }
-     this.cmp.html = '<canvas width="' + width + '" height="' + height + '" style="border:1px solid black;" id="thecanvas"></canvas>'; 
+      this.canvasID = Ext.id(null, 'thecanvas');
+     this.cmp.html = '<canvas width="' + width + '" height="' + height + '" style="border:1px solid black;" id=' + this.canvasID + '></canvas>'; 
   }, 
    
   initCanvas: function(){
